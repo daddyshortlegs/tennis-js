@@ -10,9 +10,7 @@ function score(player1Points, player2Points) {
             if (delta > 1) {
                 return `Win for player ${playerName}`;
             }
-            if (delta === 1) {
-                return `Advantage player ${playerName}`;
-            }
+            return `Advantage player ${playerName}`;
         }
     }
 
