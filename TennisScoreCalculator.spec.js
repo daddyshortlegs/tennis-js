@@ -1,6 +1,4 @@
-function score(player1Points, player2Points) {
-    return "Love-Love";
-}
+const score = require("./TennisScoreCalculator").score;
 
 describe("Tennis Calculator", () => {
     it("should score simple scores", () => {
