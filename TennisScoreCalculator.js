@@ -1,11 +1,14 @@
 function score(player1Points, player2Points) {
+    let p1Score = "Love";
+    let p2score = "Love";
     if (player1Points === 1) {
-        return "Fifteen-Love";
+        p1Score = "Fifteen";
     }
     if (player2Points === 1) {
-        return "Love-Fifteen";
+        p2score = "Fifteen";
+
     }
-    return "Love-Love";
+    return p1Score + "-" + p2score;
 }
 
 module.exports = { score };
