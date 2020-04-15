@@ -1,4 +1,8 @@
 function score(player1Points, player2Points) {
+    if (player1Points === 4 && player1Points > player2Points) {
+        return "Win for player 1";
+    }
+
     if (player2Points === player1Points) {
         return (player1Points >= 3 ? "Deuce" : scoreFor(player1Points) + "-All");
     }
