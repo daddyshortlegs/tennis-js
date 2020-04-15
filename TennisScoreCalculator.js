@@ -5,17 +5,14 @@ function score(player1Points, player2Points) {
 }
 
 function scoreFor(points) {
-    let text = "Love";
-    if (points === 1) {
-        text = "Fifteen";
+    const names = {
+        0: "Love",
+        1: "Fifteen",
+        2: "Thirty",
+        3: "Forty"
     }
-    if (points === 2) {
-        text = "Thirty";
-    }
-    if (points === 3) {
-        text = "Forty";
-    }
-    return text;
+
+    return names[points];
 }
 
 module.exports = { score };
