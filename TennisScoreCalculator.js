@@ -9,7 +9,7 @@ function score(player1Points, player2Points) {
         }
     }
 
-    if (player2Points >= 4) {
+    if (player2Points >= 4 && player2Points > player1Points) {
         if (delta > 1) {
             return "Win for player 2";
         }
