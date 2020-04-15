@@ -1,9 +1,6 @@
 function score(player1Points, player2Points) {
     if (isWinOrAdvantage(player1Points, player2Points)) {
-        if (player1Points !== player2Points) {
-            const delta = Math.abs(player1Points - player2Points);
-            return `${winOrAdvantage(delta)} player ${winningPlayer(player1Points, player2Points)}`;
-        }
+        return `${winOrAdvantage(player1Points, player2Points)} player ${winningPlayer(player1Points, player2Points)}`;
     }
 
     if (player2Points === player1Points) {
@@ -14,11 +11,11 @@ function score(player1Points, player2Points) {
 }
 
 function isWinOrAdvantage(player1Points, player2Points) {
-    return Math.max(player1Points, player2Points) >= 4;
+    return Math.max(player1Points, player2Points) >= 4 && player1Points !== player2Points;
 }
 
-function winOrAdvantage(delta) {
-    return (delta > 1) ? `Win for` : `Advantage`;
+function winOrAdvantage(player1Points, player2Points) {
+    return Math.abs(player1Points - player2Points) > 1 ? `Win for` : `Advantage`;
 }
 
 function winningPlayer(player1Points, player2Points) {
