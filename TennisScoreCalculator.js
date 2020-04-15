@@ -9,7 +9,9 @@ function score(player1Points, player2Points) {
     }
     if (player2Points === 1) {
         p2score = "Fifteen";
-
+    }
+    if (player2Points === 2) {
+        p2score = "Thirty";
     }
     return p1Score + "-" + p2score;
 }
