@@ -7,5 +7,7 @@ describe("Tennis Calculator", () => {
         expect(score(0, 1)).toEqual("Love-Fifteen");
         expect(score(2, 0)).toEqual("Thirty-Love");
         expect(score(0, 2)).toEqual("Love-Thirty");
+        expect(score(2, 1)).toEqual("Thirty-Fifteen");
+        expect(score(1, 2)).toEqual("Fifteen-Thirty");
     });
 });
