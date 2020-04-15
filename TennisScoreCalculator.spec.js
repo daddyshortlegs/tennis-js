@@ -22,6 +22,7 @@ describe("Tennis Calculator", () => {
 
     it("should score winner", () => {
         expect(score(4, 0)).toEqual("Win for player 1");
+        expect(score(0, 4)).toEqual("Win for player 2");
 
     });
 });
