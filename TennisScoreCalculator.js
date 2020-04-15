@@ -1,20 +1,29 @@
 function score(player1Points, player2Points) {
     const delta = Math.abs(player1Points - player2Points);
-    if (player1Points >= 4 && player1Points > player2Points) {
-        if (delta > 1) {
-            return "Win for player 1";
-        }
-        if (delta === 1) {
-            return "Advantage player 1";
+    if (player1Points >= 4) {
+        if (player1Points > player2Points) {
+            let playerName = "1";
+            if (delta > 1) {
+                return `Win for player ${playerName}`;
+            } else if (delta === 1) {
+                return `Advantage player ${playerName}`;
+            } else {
+                return;
+            }
         }
     }
 
-    if (player2Points >= 4 && player2Points > player1Points) {
-        if (delta > 1) {
-            return "Win for player 2";
-        }
-        if (delta === 1) {
-            return "Advantage player 2";
+    if (player2Points >= 4) {
+        if (player2Points > player1Points) {
+            let playerName = "2";
+
+            if (delta > 1) {
+                return `Win for player ${playerName}`;
+            } else if (delta === 1) {
+                return `Advantage player ${playerName}`;
+            } else {
+                return;
+            }
         }
     }
 
