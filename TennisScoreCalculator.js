@@ -6,11 +6,7 @@ function score(player1Points, player2Points) {
         if (player1Points !== player2Points) {
             const delta = Math.abs(player1Points - player2Points);
             const playerName = (player1Points > player2Points ? "1" : "2");
-
-            if (delta > 1) {
-                return `Win for player ${playerName}`;
-            }
-            return `Advantage player ${playerName}`;
+            return (delta > 1) ? `Win for player ${playerName}` : `Advantage player ${playerName}`;
         }
     }
 
