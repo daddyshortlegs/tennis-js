@@ -30,7 +30,7 @@ describe("Tennis Calculator", () => {
     });
 
     it("should be an advantage", () => {
-        // expect(score(4, 3)).toEqual("Advantage player 1");
+        expect(score(4, 3)).toEqual("Advantage player 1");
 
     });
 });
