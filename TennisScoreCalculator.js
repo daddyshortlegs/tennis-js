@@ -1,9 +1,6 @@
 function score(player1Points, player2Points) {
     if (player2Points === player1Points) {
-        if (player1Points >= 3) {
-            return "Deuce";
-        }
-        return scoreFor(player1Points) + "-All";
+        return (player1Points >= 3 ? "Deuce" : scoreFor(player1Points) + "-All");
     }
 
     return scoreFor(player1Points) + "-" + scoreFor(player2Points);
