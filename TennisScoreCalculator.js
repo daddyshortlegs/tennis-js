@@ -1,6 +1,10 @@
 function score(player1Points, player2Points) {
     p1Score = scoreFor(player1Points);
-    p2score = scoreFor(player2Points);
+    if (player2Points === player1Points) {
+        p2score = "All";
+    } else {
+        p2score = scoreFor(player2Points);
+    }
     return p1Score + "-" + p2score;
 }
 
