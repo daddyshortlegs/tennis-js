@@ -1,29 +1,18 @@
 function score(player1Points, player2Points) {
-    p1Score = getP1Score(player1Points);
-    p2score = getP2Score(player2Points);
+    p1Score = scoreFor(player1Points);
+    p2score = scoreFor(player2Points);
     return p1Score + "-" + p2score;
 }
 
-function getP1Score(player1Points) {
-    let p1Score = "Love";
-    if (player1Points === 1) {
-        p1Score = "Fifteen";
+function scoreFor(points) {
+    let text = "Love";
+    if (points === 1) {
+        text = "Fifteen";
     }
-    if (player1Points === 2) {
-        p1Score = "Thirty";
+    if (points === 2) {
+        text = "Thirty";
     }
-    return p1Score;
-}
-
-function getP2Score(player2Points) {
-    let p2score = "Love";
-    if (player2Points === 1) {
-        p2score = "Fifteen";
-    }
-    if (player2Points === 2) {
-        p2score = "Thirty";
-    }
-    return p2score;
+    return text;
 }
 
 module.exports = { score };
