@@ -12,6 +12,9 @@ function scoreFor(points) {
     if (points === 2) {
         text = "Thirty";
     }
+    if (points === 3) {
+        text = "Forty";
+    }
     return text;
 }
 

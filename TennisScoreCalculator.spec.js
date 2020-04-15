@@ -9,5 +9,8 @@ describe("Tennis Calculator", () => {
         expect(score(0, 2)).toEqual("Love-Thirty");
         expect(score(2, 1)).toEqual("Thirty-Fifteen");
         expect(score(1, 2)).toEqual("Fifteen-Thirty");
+        expect(score(3, 0)).toEqual("Forty-Love");
+        expect(score(0, 3)).toEqual("Love-Forty");
+
     });
 });
